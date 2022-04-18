@@ -1,3 +1,7 @@
+# Refactor
+
+This is a React refactor project for learning the process of how and when to make new components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
