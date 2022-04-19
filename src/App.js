@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-class App extends Component() {
+class App extends Component {
   constructor(){
     super()
     this.state = {
@@ -14,23 +14,29 @@ class App extends Component() {
       'another todo', 
       'a third todo'
     ]
+    
+    this.setState({todos: newTodos})
+  }
 
-    this.setState({...this.state, todos: newTodos})
+  todoList() {
+    return (
+      <ul>
+        {this.state.todos.map((todo) => {
+          return (
+            <li>
+              {todo}
+            </li>
+          )
+        })}
+      </ul>
+    )
   }
 
   render() {
     return (
       <div>
         <h1>My Todos</h1>
-        <ul>
-          {this.state.todos.map((todo) => {
-            return (
-              <li>
-                {todo}
-              </li>
-            )
-          })}
-        </ul>
+        {this.todoList()}
       </div>
     );
   }
